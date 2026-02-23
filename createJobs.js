@@ -36,11 +36,14 @@ function createJob(job) {
     //functon for create and count Interview and rejected part
     btnInterview.addEventListener("click", function () {
         interviewEmpty.classList.add("hidden");
+        btnInterview.remove();
+        btnRejected.remove();
         status.innerText = "INTERVIEW";
         status.className =
             "status bg-green-100 text-green-700 p-2 rounded-md inline-block";
 
         const interviewCard = card.cloneNode(true);
+        interviewCard.querySelector(".delete-btn").remove();
         interviewContainer.appendChild(interviewCard);
         interviewCount.innerText = interviewContainer.children.length;
     });
