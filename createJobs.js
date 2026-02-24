@@ -61,28 +61,6 @@ function createJob(job) {
         rejectedCount.innerText = rejectedContainer.children.length;
     });
 
-    // btnRejected.addEventListener("click", function () {
-
-    //     rejectedEmpty.classList.add("hidden");
-
-    //     status.innerText = "REJECTED";
-    //     status.className =
-    //         "status bg-red-100 text-red-700 p-2 rounded-md inline-block";
-
-    //     btnInterview.remove();
-    //     btnRejected.remove();
-
-    //     const copy = card.cloneNode(true);
-
-    //     const copyStatus = copy.querySelector(".status");
-    //     copyStatus.innerText = "REJECTED";
-    //     copyStatus.className =
-    //         "status bg-red-100 text-red-700 p-2 rounded-md inline-block";
-    //     rejectedContainer.appendChild(copy);
-    //     rejectedCount.innerText = rejectedContainer.children.length;
-    //     //updateCounts();
-    // });
-
     card.querySelector(".delete-btn").addEventListener("click", function () {
         card.remove();
         updateJobCount();
